@@ -7,6 +7,17 @@
     <link href="{{ '/css/style.css' | url }}" rel="stylesheet" />
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>
