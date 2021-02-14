@@ -1,0 +1,50 @@
+body {
+    font-family: $font-family-base;
+}
+
+.h1,
+h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        font-size: 4rem; 
+    }
+
+    &--large {
+        @media screen and (min-width: $breakpoint-desktop-small) {
+            font-size: 6.25rem;
+        }
+    }
+}
+
+.h2,
+h2 {
+    font-size: 2rem;
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        font-size: 3rem; 
+    }
+}
+
+.h3,
+h3 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.paragraph,
+p,
+a,
+li {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+}
+
+.lede {
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        font-size: 1.125rem;
+    }
+}
