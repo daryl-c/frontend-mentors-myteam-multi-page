@@ -4,7 +4,7 @@
   "description": "![Design preview for the myteam website coding challenge](./preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
+    "watch:sass": "sass  --no-source-map --watch src/scss:dist/css",
     "watch:eleventy": "eleventy --serve",
     "build:sass-site": "sass  --no-source-map src/scss/style.scss dist/css/style.css",
     "build:sass": "npm-run-all --parallel build:sass-site",
