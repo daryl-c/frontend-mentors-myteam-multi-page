@@ -1,13 +1,12 @@
 @import "theme";
 @import "reset";
 @import "typography";
+@import "layout";
 
 @import "utils/wrapper";
 
-body {
-    background: $color-background;
-    color: $color-text-light;
-}
+@import "blocks/cta";
+@import "blocks/btn";
 
 a,
 input {
