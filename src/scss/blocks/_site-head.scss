@@ -1,0 +1,18 @@
+.site-head {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__logo {
+        margin-right: 2.5rem;
+
+        @media screen and (min-width: $breakpoint-desktop-small) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

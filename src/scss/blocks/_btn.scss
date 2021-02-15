@@ -10,18 +10,20 @@
     &--ghost-dark {
         border-color: $color-text-dark;
         background: transparent;
+
+        &:hover {
+            background: $color-text-dark;
+            color: $color-text-light;
+        }
     }
 
     &--ghost-light {
         border-color: $color-text-light;
         background: transparent;
-    }
 
-    &--light {
-
-    }
-
-    &--dark {
-
+        &:hover {
+            background: $color-light;
+            color: $color-text-dark;
+        }
     }
 }

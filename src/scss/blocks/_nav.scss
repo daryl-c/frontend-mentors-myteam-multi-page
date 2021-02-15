@@ -1,0 +1,106 @@
+.nav {
+    @media screen and (min-width: $breakpoint-tab-port) {
+        width: 100%;
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &--close {
+            position: absolute;
+            right: 1.5rem;
+            top: 3.5rem;
+        }
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            display: none;
+        }
+    }
+
+    &__overlay {
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.6);
+        z-index: 5;
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 100;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 7rem;
+        background: url('../images/bg-pattern-about-1-mobile-nav-1.svg'), $color-secondary-300;
+        background-repeat: no-repeat;
+        background-position: bottom 0 right -100px;
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            display: block;
+            position: static;
+            background: none;
+            padding: 0;
+        }
+    }
+
+    &__list {
+        --flow-space: 1.5rem;
+        padding-left: 0;
+
+        li:last-child {
+            margin-top: 2.25rem;
+        }
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            display: flex;
+            align-items: center;
+    
+            li {
+                margin-top: 0;
+            }
+
+            li:last-child {
+                margin-top: 0;
+                margin-left: auto;
+            }
+
+            & > * + * {
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    &__list-link {
+        text-decoration: none;
+
+        &:hover:not([class*="btn"]) {
+            color: $color-accent;
+        }
+    }
+
+    &--open {
+        .nav__overlay {
+            display: block;
+            transition: transform .4s;
+        }
+
+        .nav__inner {
+            display: block;
+            transition: transform .2s ease-out;
+            transform: translateX(0);
+        }
+    }
+}
