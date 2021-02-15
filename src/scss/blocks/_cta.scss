@@ -1,0 +1,34 @@
+.cta {
+    color: $color-text-dark;
+    text-align: center;
+
+
+    background: url('../images/bg-pattern-home-6-about-5.svg'), $color-accent;
+    background-repeat: no-repeat;
+    background-position: left 0% bottom -26px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4.75rem;
+        padding-bottom: 4.75rem;
+        max-width: 57.25rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

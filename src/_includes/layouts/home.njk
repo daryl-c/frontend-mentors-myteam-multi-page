@@ -3,7 +3,7 @@
 {% block content %}
   <section>
     <div class="wrapper">
-      <h1 class="h1 h1--large">Find the best talent</h1>
+      <h1 class="h1 h1--large">Find the best <span class="accent">talent</span></h1>
 
       <p class="lede">Finding the right people and building high performing teams can 
   be hard. Most companies aren’t tapping into the abundance of global 
@@ -61,10 +61,5 @@
         <span>Co-founder of MyPhysio</span>
       </div>
     </section>
-    <section class="bg-accent dark">
-      <div class="wrapper">
-        <h2>Ready to get started?</h2>
-        contact us
-      </div>
-    </section>
+    {% include "partials/cta.njk" %}
   {% endblock content %}

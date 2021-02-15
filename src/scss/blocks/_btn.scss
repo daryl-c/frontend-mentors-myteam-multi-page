@@ -1,0 +1,27 @@
+.btn {
+    display: inline-block;
+    border: 2px solid;
+    text-decoration: none;
+    line-height: 1;
+    padding: 1em 2.2em;
+    border-radius: $border-radius;
+    font-weight: 600;
+
+    &--ghost-dark {
+        border-color: $color-text-dark;
+        background: transparent;
+    }
+
+    &--ghost-light {
+        border-color: $color-text-light;
+        background: transparent;
+    }
+
+    &--light {
+
+    }
+
+    &--dark {
+
+    }
+}
