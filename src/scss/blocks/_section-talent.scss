@@ -1,0 +1,67 @@
+.section-talent {
+    text-align: center;
+
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 48ch;
+
+        padding-top: 2rem;
+        padding-bottom: 12.25rem;
+        background-image: url('../../images/bg-pattern-home-2.svg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        &__inner {
+            padding-bottom: 16rem;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        text-align: left;
+        background-image: url('../../images/bg-pattern-home-1.svg');
+        background-repeat: no-repeat;
+        background-position: -100px 50%;
+
+        &__inner {
+            flex-direction: row;
+            max-width: 100%;
+            justify-content: space-between;
+            background-position: right bottom;
+            padding-top: 15.625rem;
+            margin-top: -9rem;
+
+            & > * {
+                margin: 0;
+            }
+
+            & > *:first-child {
+                flex: 0 1 50%;
+            }
+
+            & > *:last-child {
+                flex: 0 1 40%;
+            }
+        }
+
+        &__lede {
+            position: relative;
+            padding-top: 5rem;
+
+            &::before {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 3.125rem;
+                background-color: $color-secondary-100;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
