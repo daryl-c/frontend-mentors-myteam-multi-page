@@ -10,8 +10,14 @@
 @import "blocks/btn";
 @import "blocks/nav";
 @import "blocks/site-head";
+@import "blocks/site-footer";
 
 a,
 input {
     color: inherit;
+}
+
+:focus {
+    outline: 2px dotted $color-light;
+    outline-offset: 4px;
 }
