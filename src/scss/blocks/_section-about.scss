@@ -1,0 +1,55 @@
+.section-about {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 6.75rem;
+    background-image: url("../images/bg-pattern-about-1-mobile-nav-1.svg");
+    background-repeat: no-repeat;
+    background-position: right -100px bottom -100px;
+    
+    &__inner {
+        max-width: 47ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__lede {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        background-position: right -100px bottom 0;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        padding-top: 4.5rem;
+        padding-bottom: 7.5rem;
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+        }
+
+        &__title {
+            line-height: 1.5625;
+        }
+
+        &__lede {
+            flex: 0 0 66%;
+            text-align: left;
+            padding-top: 2.5rem;
+
+            &::before {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 3.125rem;
+                background-color: $color-accent;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
