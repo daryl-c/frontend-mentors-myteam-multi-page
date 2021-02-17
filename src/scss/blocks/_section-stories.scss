@@ -1,0 +1,61 @@
+.section-stories {
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+    text-align: center;
+
+    background-image: url("../../images/bg-pattern-home-4-about-3.svg"), url("../../images/bg-pattern-home-5.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+
+    &__list[role="list"] {
+        --flow-space: 3rem;
+        padding-left: 0;
+        margin-top: 3rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        &__list[role="list"] {
+            --flow-space: 0;
+            display: flex;
+            justify-content: space-between;
+
+            & > * {
+                flex: 0 0 calc((100% - 3.75rem)/3);
+            }
+        }
+    }
+}
+
+.story {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65ch;
+    &__quote {
+        padding-top: 2.25rem;
+        background-image: url('../../images/icon-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+
+    }
+
+    &__author {
+        color: $color-secondary-100;
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    &__author-role {
+        font-style: italic;
+        font-size: .8125rem;
+    }
+
+    &__author-avatar {
+        width: 3.875rem;
+        height: 3.875rem;
+        border-radius: 50%;
+        border: 2px solid $color-light;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

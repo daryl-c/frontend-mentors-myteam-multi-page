@@ -48,28 +48,32 @@
 
 
 
-    <section class="bg-secondary-500">
-      <div class="wrapper">
-        <h2>Delivering real results for top companies. Some of our success stories.</h2>
-
-        <blockquote>“The team perfectly fit the specialized skill set required. They focused 
-        on the most essential features helping us launch the platform eight months 
-        faster than planned.”</blockquote>
-        <h3>Kady Baker</h3>
-        <span>Product Manager at Bookmark</span>
-
-        <blockquote>“We needed to automate our entire onboarding process. The team came in and 
-        built out the whole journey. Since going live, user retention has gone 
-        through the roof!”</blockquote>
-        <h3>Aiysha Reese</h3>
-        <span>Founder of Manage<span>
-
-        <blockquote>“Amazing. Our team helped us build an app that delivered a new experience for 
-        hiring a physio. The launch was an instant success with 100k downloads in the 
-        first month.”</blockquote>
-        <h3>Arthur Clarke</h3>
-        <span>Co-founder of MyPhysio</span>
+  <section class="section-stories bg-secondary-500">
+    <div class="wrapper">
+      <div class="section-stories__inner">
+        <h2 class="section-stories__title">Delivering real results for top companies. Some of our <span class="secondary-100">success stories.</span></h2>
+        <ul class="section-stories__list flow" role="list">
+          <li class="story">
+            <blockquote class="story__quote">“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”</blockquote>
+            <h3 class="story__author">Kady Baker</h3>
+            <span class="story__author-role">Product Manager at Bookmark</span>
+            <img src="images/avatar-kady.jpg" alt="Kady's avatar" class="story__author-avatar">
+          </li>
+            <li class="story">
+              <blockquote class="story__quote">“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”</blockquote>
+              <h3 class="story__author">Aiysha Reese</h3>
+              <span class="story__author-role">Founder of Manage<span>
+              <img src="images/avatar-aiysha.jpg" alt="Kady's avatar" class="story__author-avatar">
+            </li> 
+            <li class="story">
+              <blockquote class="story__quote">“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”</blockquote>
+              <h3 class="story__author">Arthur Clarke</h3>
+              <span class="story__author-role">Co-founder of MyPhysio</span>
+              <img src="images/avatar-arthur.jpg" alt="Kady's avatar" class="story__author-avatar">
+            </li> 
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
     {% include "partials/cta.njk" %}
   {% endblock content %}
