@@ -43,14 +43,12 @@ h3 {
     line-height: 1.75rem;
 }
 
-.paragraph, p, a, li {
-    font-weight: 500;
-}
-
 .paragraph,
 p,
 a,
-li {
+li,
+address  {
+    font-weight: 500;
     font-size: 0.9375rem;
     line-height: 1.5625rem;
 }

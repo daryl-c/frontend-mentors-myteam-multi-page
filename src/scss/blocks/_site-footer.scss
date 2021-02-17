@@ -1,3 +1,130 @@
 .site-footer {
     background: $color-secondary-900;
+    padding-top: 4.125rem;
+    padding-bottom: 4.125rem;
+    text-align: center;
+
+    &__logo {
+        height: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__nav-list[role="list"] {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 1.5rem;
+
+        & > * {
+            display: inline-block;
+        }
+
+        & > * + * {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__nav-link {
+        text-decoration: none;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__contact {
+        margin-top: 1.5rem;
+        font-style: normal;
+        opacity: $opacity-faded-text-dark;
+    }
+
+    &__social {
+        margin-top: 2.5rem;
+    }
+
+    &__social-link {
+        text-decoration: none;
+        & + * {
+            margin-left: 1rem;
+        }
+    }
+
+    &__social-icon {
+        cursor: pointer;
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__copyright {
+        margin-top: 1rem;
+        opacity: $opacity-faded-text-dark;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        text-align: left;
+
+        &__logo {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__inner-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__inner-top-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__contact {
+            margin-top: 0;
+            text-align: right;
+        }
+
+        &__inner-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+
+            & > * {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        padding-left: 10.25rem;
+        padding-right: 10.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__logo {
+            height: 2.5rem;
+        }
+
+        &__nav-link {
+            font-size: 1.125rem;
+        }
+
+        &__contact {
+            margin-left: 7.7rem;
+            text-align: left;
+        }
+
+        &__inner-bottom {
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-top: 0;
+        }
+    }
 }

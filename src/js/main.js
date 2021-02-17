@@ -24,7 +24,6 @@ const getAllFocusableElements = parent => {
 };
 
 function trapFocus(event) {
-    console.log(event.key, event.shiftKey);
     if (event.key === KEY_CODE_MAP.ESCAPE) {
         closeMenu();
     }
