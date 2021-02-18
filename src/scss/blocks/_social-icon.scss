@@ -1,0 +1,9 @@
+.social-icon {
+    cursor: pointer;
+    text-decoration: none;
+    > * {
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}

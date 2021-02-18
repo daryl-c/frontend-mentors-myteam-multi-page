@@ -1,0 +1,20 @@
+.people {
+    &__list {
+        --flow-space: 3.25rem;
+        padding-left: 0;
+        margin-top: 3rem;
+
+        @media screen and (min-width: $breakpoint-tab-port) {
+            --flow-space: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: .5rem;
+            row-gap: 4.75rem;
+        }
+
+        @media screen and (min-width: $breakpoint-desktop-small) {
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1.85rem;
+        }
+    }
+}

@@ -5,14 +5,20 @@
 
 @import "utils/flow";
 @import "utils/wrapper";
+@import "utils/visually-hidden";
 
+@import "blocks/avatar";
 @import "blocks/cta";
 @import "blocks/btn";
 @import "blocks/nav";
+@import "blocks/people";
+@import "blocks/person";
 @import "blocks/site-head";
 @import "blocks/site-footer";
+@import "blocks/social-icon";
 
 @import "blocks/section-about";
+@import "blocks/section-directors";
 @import "blocks/section-features";
 @import "blocks/section-stories";
 @import "blocks/section-talent";

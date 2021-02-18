@@ -49,13 +49,6 @@
         }
     }
 
-    &__social-icon {
-        cursor: pointer;
-        &:hover {
-            color: $color-accent;
-        }
-    }
-
     &__copyright {
         margin-top: 1rem;
         opacity: $opacity-faded-text-dark;

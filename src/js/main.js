@@ -68,3 +68,15 @@ openBtn.addEventListener('click', () => {
 });
 closeBtn.addEventListener('click', closeMenu);
 navOverlay.addEventListener('click', closeMenu);
+
+// 
+// People show quote functionality 
+// 
+const peopleList = document.getElementById('people-list');
+const peopleListItems = peopleList.querySelectorAll('.person');
+peopleList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('person__btn')) {
+        const targetIndex = event.target.getAttribute('data-index') - 1;
+        peopleListItems[targetIndex].classList.toggle('person--active')
+    }
+})

@@ -1,0 +1,27 @@
+.section-directors {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    background: url("../images/bg-pattern-about-2-contact-1.svg"), url("../images/bg-pattern-home-4-about-3.svg"), $color-secondary-500;
+    background-repeat: no-repeat;
+    background-position: left -100px top -100px, right bottom;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+        background-position: left -100px top 0, right bottom;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        padding-top: 8.75rem;
+        padding-bottom: 8.75rem;
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: $breakpoint-desktop-small) {
+            margin-bottom: 4rem;
+        }
+    }
+}
