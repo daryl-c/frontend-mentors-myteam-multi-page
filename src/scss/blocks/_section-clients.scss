@@ -1,0 +1,25 @@
+.section-clients {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    background: $color-secondary-900;
+    text-align: center;
+    background-image: url("../images/bg-pattern-about-4.svg");
+    background-repeat: no-repeat;
+    background-position: top -100px left -100px;
+
+    &__title {
+        margin-bottom: 4rem;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        background-position: top -100px left 0;
+        padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        background-position: top left;
+        padding-top: 8.75rem;
+        padding-bottom: 8.75rem;
+    }
+}

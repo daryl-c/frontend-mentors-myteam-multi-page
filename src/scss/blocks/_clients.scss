@@ -1,0 +1,32 @@
+.clients {
+    &__list {
+        list-style: none;
+        --flow-space: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    &__logo {
+        max-width: 9rem;
+        height: auto;
+    }
+
+    @media screen and (min-width: $breakpoint-tab-port) {
+        &__list {
+            --flow-space: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop-small) {
+        &__list {
+            padding-left: 10.25rem;
+            padding-right: 10.25rem;
+        }
+    }
+}

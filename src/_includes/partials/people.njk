@@ -2,7 +2,7 @@
     <ul class="people__list flow" role="list" id="people-list">
         {% for item in people %}
             <li class="person">
-                <img class="person__avatar avatar avatar--large" src="/images/{{ item.avatar }}" alt="Nikita Avatar" />
+                <img width="256" height="256" class="person__avatar avatar avatar--large" src="/images/{{ item.avatar }}" alt="Nikita Avatar" />
                 <h3 class="person__name">{{ item.name }}</h3>
                 <blockquote class="person__quote">
                     {{ item.quote }}
