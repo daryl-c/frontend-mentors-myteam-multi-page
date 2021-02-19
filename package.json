@@ -1,6 +1,6 @@
 {
   "name": "myteam-multi-page-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "![Design preview for the myteam website coding challenge](./preview.jpg)",
   "main": "index.js",
   "scripts": {
