@@ -1,0 +1,48 @@
+.form {
+    text-align: left;
+
+    & > * + * {
+        margin-top: 1.5rem;
+    }
+
+    &__input {
+        display: block;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #979797;
+        width: 100%;
+        padding: 0 1rem 1rem;
+        color: $color-light;
+        
+        &:focus {
+            outline: none;
+            border-color: $color-secondary-100;
+        }
+    
+        &::placeholder {
+            color: $color-light;
+            opacity: 0.6;
+        }
+    }
+
+    &__input-alert {
+        display: none;
+        padding-left: 1rem;
+        font-style: italic;
+        font-size: 0.625rem;
+    }
+
+    &__field--invalid &__input {
+        color: $color-accent;
+        border-color: $color-accent;
+        
+        &::placeholder {
+            color: $color-accent;
+        }
+    }
+    
+    &__field--invalid &__input-alert {
+        display: block;
+        color: $color-accent;
+    }
+}

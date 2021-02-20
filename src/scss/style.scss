@@ -3,6 +3,16 @@
 @import "typography";
 @import "layout";
 
+a,
+input {
+    color: inherit;
+}
+
+:focus {
+    outline: 2px dotted $color-light;
+    outline-offset: 4px;
+}
+
 @import "utils/flow";
 @import "utils/wrapper";
 @import "utils/visually-hidden";
@@ -11,6 +21,7 @@
 @import "blocks/clients";
 @import "blocks/cta";
 @import "blocks/btn";
+@import "blocks/form";
 @import "blocks/nav";
 @import "blocks/people";
 @import "blocks/person";
@@ -25,13 +36,3 @@
 @import "blocks/section-features";
 @import "blocks/section-stories";
 @import "blocks/section-talent";
-
-a,
-input {
-    color: inherit;
-}
-
-:focus {
-    outline: 2px dotted $color-light;
-    outline-offset: 4px;
-}
