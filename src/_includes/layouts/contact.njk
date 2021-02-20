@@ -1,0 +1,69 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <section class="section-contact">
+        <div class="wrapper">
+            <div class="section-contact__inner">
+                <div>
+                    <h1 class="section-contact__title">Contact</h1>
+                    <h2 class="section-contact__subtitle">Ask us about</h2>
+                    <ul class="section-contact__topic-list" role="list">
+                        <li class="section-contact__topic-item">
+                            <img class="section-contact__topic-logo" src="/images/icon-person.svg" alt="">
+                            <p>The quality of our talent network</p>
+                        </li>
+                        <li class="section-contact__topic-item">
+                            <img class="section-contact__topic-logo" src="/images/icon-cog.svg" alt="">
+                            <p>Usage & implementation of our software</p>
+                        </li>
+                        <li class="section-contact__topic-item">
+                            <img class="section-contact__topic-logo" src="/images/icon-chart.svg" alt="">
+                            <p>How we help drive innovation</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="section-contact__form form" action="#" method="post" autocomplete="off" id="contact-form">
+                    <div class="form__field">
+                        <label>
+                            <span class="visually-hidden">Name</span>
+                            <input class="form__input contact-form__input" type="text" name="name" id="name" placeholder="Name">
+                        </label>
+                    </div>
+                    <div class="form__field" data-field="email">
+                        <label>
+                            <span class="visually-hidden">Email</span>
+                            <input class="form__input contact-form__input" type="email" name="email" id="email" placeholder="Email Address" required>
+                            <span class="form__input-alert">This field is required</span>
+                        </label>
+                    </div>
+                    <div class="form__field">
+                        <label> 
+                            <span class="visually-hidden">Company</span>
+                            <input class="form__input contact-form__input" type="company" name="company" id="company" placeholder="Company Name">
+                        </label>
+                    </div>
+                    <div class="form__field">
+                        <label>
+                            <span class="visually-hidden">Title</span>
+                            <input class="form__input contact-form__input" type="text" name="title" id="title" placeholder="Title">
+                        </label>
+                    </div>
+                    <div class="form__field">
+                        <label>
+                            <span class="visually-hidden">Message</span>
+                            <textarea class="form__input" name="message" id="message" cols="30" rows="3" placeholder="Message"></textarea>
+                        </label>
+                    </div>
+                    <div class="form__field">
+
+                        <button class="btn btn--light form__btn">submit</button>
+                    </div>
+                    <div class="form__field">
+                        <span class="form__message"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

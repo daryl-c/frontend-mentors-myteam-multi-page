@@ -6,6 +6,7 @@
     padding: 1em 2.2em;
     border-radius: $border-radius;
     font-weight: 600;
+    cursor: pointer;
 
     &--ghost-dark {
         border-color: $color-text-dark;
@@ -23,7 +24,19 @@
 
         &:hover {
             background: $color-light;
+            background: $color-light;
             color: $color-text-dark;
+        }
+    }
+
+    &--light {
+        color: $color-text-dark;
+        background: $color-text-light;
+        border-color: transparent;
+
+        &:hover {
+            background: $color-text-dark;
+            color: $color-light; 
         }
     }
 }

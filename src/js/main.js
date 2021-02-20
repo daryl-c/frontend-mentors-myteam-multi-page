@@ -1,3 +1,6 @@
+// 
+// Nav 
+// 
 const openBtn = document.getElementById('nav-open');
 const closeBtn = document.getElementById('nav-close');
 const nav = document.querySelector('.nav');
@@ -73,10 +76,50 @@ navOverlay.addEventListener('click', closeMenu);
 // People show quote functionality 
 // 
 const peopleList = document.getElementById('people-list');
-const peopleListItems = peopleList.querySelectorAll('.person');
-peopleList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('person__btn')) {
-        const targetIndex = event.target.getAttribute('data-index') - 1;
-        peopleListItems[targetIndex].classList.toggle('person--active')
-    }
-})
+if (peopleList) {
+    const peopleListItems = peopleList.querySelectorAll('.person');
+    peopleList.addEventListener('click', (event) => {
+        if (event.target.classList.contains('person__btn')) {
+            const targetIndex = event.target.getAttribute('data-index') - 1;
+            peopleListItems[targetIndex].classList.toggle('person--active')
+        }
+    });
+}
+
+// 
+// Contact Form
+//
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    const emailInput = contactForm.querySelector('#email');
+    const emailFormField = contactForm.querySelector('[data-field="email"]');
+    
+    const validationRegex = new RegExp(
+        emailInput.getAttribute('pattern') || '[^@]+@[^.]+..+',
+        'i'
+        ); 
+        
+    emailInput.required = false;
+    contactForm.setAttribute('novalidate', '');
+    
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!validationRegex.test(emailInput.value.trim())) {
+            emailFormField.classList.add('form__field--invalid');
+            const emailInputAlert = emailFormField.querySelector('.form__input-alert');
+            const validationMessage = emailInput.value.trim() === '' ? 'This field is required' : 'Not a valid email address'
+            
+            emailInputAlert.innerText = validationMessage;
+
+            function resetValidation() {
+                emailInputAlert.innerText = '';
+                emailFormField.classList.remove('form__field--invalid');
+                emailInput.removeEventListener('keyup', resetValidation);
+            }
+
+            emailInput.addEventListener('keyup', resetValidation);
+        } else {
+            console.log('Submitting!');
+        }
+    })
+}
