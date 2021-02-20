@@ -96,36 +96,65 @@ const KEY_CODE_MAP = {
 // Contact Form
 //
 (function () {
+    function resetValidation(formField) {
+        if (formField.classList.contains('form__field--invalid')) {
+            formField.querySelector('.form__input-alert').innerText = '';
+            formField.classList.remove('form__field--invalid');
+        }
+    }
+    
+    function validateEmail(emailInput) {
+        const validationRegex = new RegExp(emailInput.getAttribute('pattern') || '[^@]+@[^.]+..+', 'i'); 
+        return validationRegex.test(emailInput.value.trim());
+    }
+    
+    function renderError(formField, message) {
+        formField.classList.add('form__field--invalid');
+        formField.querySelector('.form__input-alert').innerText = message;
+    }
+    
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        contactForm.setAttribute('novalidate', '');
+
         const emailInput = contactForm.querySelector('#email');
         const emailFormField = contactForm.querySelector('[data-field="email"]');
+        const nameInput = contactForm.querySelector('#name');
+        const nameFormField = contactForm.querySelector('[data-field="name"]');
+        const messageInput = contactForm.querySelector('#message');
+        const messageFormField = contactForm.querySelector('[data-field="message"]');
         
-        const validationRegex = new RegExp(
-            emailInput.getAttribute('pattern') || '[^@]+@[^.]+..+',
-            'i'
-            ); 
-            
         emailInput.required = false;
-        contactForm.setAttribute('novalidate', '');
+        nameInput.required = false;
+        messageInput.required = false;
+
+        [emailFormField, nameFormField, messageFormField].forEach(formField => {
+            formField.addEventListener('keyup', () => resetValidation(formField));
+        })
         
         contactForm.addEventListener('submit', (event) => {
+            let hasError = false;
             event.preventDefault();
-            if (!validationRegex.test(emailInput.value.trim())) {
-                emailFormField.classList.add('form__field--invalid');
-                const emailInputAlert = emailFormField.querySelector('.form__input-alert');
-                const validationMessage = emailInput.value.trim() === '' ? 'This field is required' : 'Not a valid email address'
-                
-                emailInputAlert.innerText = validationMessage;
 
-                function resetValidation() {
-                    emailInputAlert.innerText = '';
-                    emailFormField.classList.remove('form__field--invalid');
-                    emailInput.removeEventListener('keyup', resetValidation);
+            // Check email is valid
+            if (!validateEmail(emailInput)) {
+                hasError = true;
+                renderError(emailFormField, 'Please use a valid email address');
+            }
+            
+            // Check required fields
+            [
+                [emailFormField, emailInput],
+                [nameFormField, nameInput],
+                [messageFormField, messageInput]
+            ].forEach(([formField, formInput]) => {
+                if (formInput.value.trim() === '') {
+                    hasError = true;
+                    renderError(formField, 'This field is required');
                 }
-
-                emailInput.addEventListener('keyup', resetValidation);
-            } else {
+            })
+            
+            if (!hasError) {
                 contactForm.innerHTML = `<p>Thanks so much for reaching out. We'll be in contact soon! In the meantime, you can <a href="#">check us out on twitter</a></p>`
                 console.log('Submitting!');
             }

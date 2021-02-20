@@ -24,39 +24,40 @@
                 </div>
 
                 <form class="section-contact__form form" action="#" method="post" autocomplete="off" id="contact-form">
-                    <div class="form__field">
+                    <div class="form__field" data-field="name">
                         <label>
                             <span class="visually-hidden">Name</span>
-                            <input class="form__input contact-form__input" type="text" name="name" id="name" placeholder="Name">
+                            <input class="form__input contact-form__input" type="text" name="name" id="name" placeholder="Name" required>
+                            <span class="form__input-alert"></span>
                         </label>
                     </div>
                     <div class="form__field" data-field="email">
                         <label>
                             <span class="visually-hidden">Email</span>
                             <input class="form__input contact-form__input" type="email" name="email" id="email" placeholder="Email Address" required>
-                            <span class="form__input-alert">This field is required</span>
+                            <span class="form__input-alert"></span>
                         </label>
                     </div>
-                    <div class="form__field">
+                    <div class="form__field" data-field="company">
                         <label> 
                             <span class="visually-hidden">Company</span>
                             <input class="form__input contact-form__input" type="company" name="company" id="company" placeholder="Company Name">
                         </label>
                     </div>
-                    <div class="form__field">
+                    <div class="form__field" data-field="title">
                         <label>
                             <span class="visually-hidden">Title</span>
-                            <input class="form__input contact-form__input" type="text" name="title" id="title" placeholder="Title">
+                            <input id="title" class="form__input contact-form__input" type="text" name="title" id="title" placeholder="Title">
                         </label>
                     </div>
-                    <div class="form__field">
+                    <div class="form__field" data-field="message">
                         <label>
                             <span class="visually-hidden">Message</span>
-                            <textarea class="form__input" name="message" id="message" cols="30" rows="3" placeholder="Message"></textarea>
+                            <textarea id="message" class="form__input" name="message" id="message" cols="30" rows="3" placeholder="Message" required></textarea>
+                            <span class="form__input-alert"></span>
                         </label>
                     </div>
                     <div class="form__field">
-
                         <button class="btn btn--light form__btn">submit</button>
                     </div>
                     <div class="form__field">
