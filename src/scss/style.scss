@@ -13,6 +13,10 @@ input {
     outline-offset: 4px;
 }
 
+textarea {
+    resize: vertical;
+}
+
 @import "utils/flow";
 @import "utils/wrapper";
 @import "utils/visually-hidden";
