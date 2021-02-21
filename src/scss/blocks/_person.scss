@@ -48,6 +48,10 @@
         transform: translateY(50%);
         transition: background-color .3s;
 
+        &:hover {
+            background: $color-secondary-100;
+        }
+
         &::after {
             content: '';
             display: block;
