@@ -65,9 +65,6 @@ const KEY_CODE_MAP = {
         openBtn.setAttribute('aria-expanded', true);
         nav.classList.add('nav--open');
         window.addEventListener('keydown', trapFocus);
-    
-        const firstElement = getAllFocusableElements(nav.querySelector('.nav__inner'))[0];
-        firstElement.focus();
     });
     closeBtn.addEventListener('click', closeMenu);
     navOverlay.addEventListener('click', closeMenu);
